@@ -1,0 +1,575 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml version = "1.0.1" encoding = "UTF-8">
+
+
+
+<category>
+    <pattern>DZIEN DOBRY</pattern>
+    <template>Dzien dobry, cieszymy sie, ze wybral Pan nasz sklep, poszukuje Pan butow damskich czy meskich?
+        <think><set name="topic">POWITANIE</set></think>
+    </template> 
+</category>
+
+<category>
+    <pattern>DZIEN DOBRY *</pattern>
+    <template>Dzien dobry, cieszymy sie, ze wybral Pan nasz sklep, poszukuje Pan butow damskich czy meskich?
+        <think><set name="topic">POWITANIE</set></think>
+    </template> 
+</category>
+
+<category>
+    <pattern>WITAM</pattern>
+    <template><srai>DZIEN DOBRY</srai></template> 
+</category>
+
+<category>
+    <pattern>WITAM *</pattern>
+    <template><srai>DZIEN DOBRY</srai></template> 
+</category>
+
+<category>
+    <pattern>CZESC</pattern>
+    <template><srai>DZIEN DOBRY</srai></template> 
+</category>
+
+<category>
+    <pattern>CZESC *</pattern>
+    <template><srai>DZIEN DOBRY</srai></template> 
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <template><srai>DZIEN DOBRY</srai></template> 
+</category>
+
+<topic name="POWITANIE">
+
+    <category>
+        <pattern>MESKICH</pattern>
+        <template>Jakiego rozmiaru Pan poszukuje?
+            <think><set name="topic">MESKIE</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>MESKI*</pattern>
+        <template><srai>MESKICH</srai></template>
+    </category>
+
+    <category>
+        <pattern>* MESKICH</pattern>
+        <template><srai>MESKICH</srai></template>
+    </category>
+
+    <category>
+        <pattern>* MESKI*</pattern>
+        <template><srai>MESKICH</srai></template>
+    </category>
+
+    <category>
+        <pattern>DAMSKICH</pattern>
+        <template>Jakiego rozmiaru Pan poszukuje?
+            <think><set name="topic">DAMSKIE</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DAMSKI *</pattern>
+        <template><srai>DAMSKICH</srai></template>
+    </category>
+
+    <category>
+        <pattern>* DAMSKICH</pattern>
+        <template><srai>DAMSKICH</srai></template>
+    </category>
+
+    <category>
+        <pattern>* DAMSKI *</pattern>
+        <template><srai>DAMSKICH</srai></template>
+    </category>
+
+    <category>
+        <pattern>DZIECIECYCH</pattern>
+        <template>Niestety nie posiadamy takich w swojej ofercie. Moze jednak zdecyduje sie Pan na zakup butow dla siebie?
+            <think><set name="topic">INNE</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* DZIECIECYCH</pattern>
+        <template><srai>DZIECIECYCH</srai></template>
+    </category>
+
+    <category>
+        <pattern>DZIECIE*</pattern>
+        <template>Niestety nie posiadamy takich w swojej ofercie. Moze jednak zdecyduje sie Pan na zakup butow dla siebie?
+            <think><set name="topic">INNE</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* DZIECIE*</pattern>
+        <template><srai>DZIECIE*</srai></template>
+    </category>
+
+    <category>
+        <pattern>NIE*</pattern>
+        <template>Polecilbym Panu rowniez zestaw pielegnacyjny do butow. Chcialbym sie Pan dowiedziec czegos wiecej na ten temat?
+            <think><set name="topic">ZESTAW</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*NIE*</pattern>
+        <template><srai>NIE*</srai></template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <template>Przepraszam, chyba nie zrozumialem Pana, prosilbym o wytlumaczenie ktore buty ma Pan na mysli</template>
+    </category>
+    
+    <category>
+        <pattern>_</pattern>
+        <that>Przepraszam, chyba nie zrozumialem Pana, prosilbym o wytlumaczenie ktore buty ma Pan na mysli</that>
+        <template>Polecilbym Panu rowniez zestaw pielegnacyjny do butow. Chcialbym sie Pan dowiedziec czegos wiecej na ten temat?
+            <think><set name="topic">ZESTAW</set></think>
+        </template>
+    </category>
+    
+
+</topic>
+
+<topic name="INNE">
+
+    <category>
+        <pattern>TAK</pattern>
+        <template>Jakiego rozmiaru butow Pan poszukuje?
+            <think><set name="topic">MESKIE</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TAK *</pattern>
+        <template><srai>TAK</srai></template>
+    </category>
+    
+    <category>
+        <pattern>* TAK *</pattern>
+        <template><srai>TAK</srai></template>
+    </category>
+
+    <category>
+        <pattern>CHC*</pattern>
+        <template><srai>TAK</srai></template>
+    </category>
+    
+    <category>
+        <pattern>* CHC*</pattern>
+        <template><srai>TAK</srai></template>
+    </category>
+
+    <category>
+        <pattern>NIE</pattern>
+        <template>W takim razie polecam kupic zestaw pielegnacyjny do butow. Chcialbym sie Pan dowiedziec czegos wiecej na ten temat?
+            <think><set name="topic">ZESTAW</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NIE *</pattern>
+        <template><srai>NIE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>*NIE *</pattern>
+        <template><srai>NIE</srai></template>
+    </category>
+
+    <category>
+        <pattern>MOZE</pattern>
+        <template>Napewno znajdziemy buty, ktore sie panu spodobaja, jakiego rozmiaru Pan potrzebuje?
+            <think><set name="topic">MESKIE</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MOZE*</pattern>
+        <template><srai>MOZE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>* MOZE*</pattern>
+        <template><srai>MOZE</srai></template>
+    </category>
+
+    
+    <category>
+      <pattern>*</pattern>
+      <that>W naszym sklepie sprzedajemy jedynie buty oraz akcesoria do nich, musi sie Pan zdecydowac co chce kupic, 
+            prosze powiedziec tylko co Pana najbardziej interesuje buty meskie, damskie czy akcesoria?</that>
+      <template>
+        <think><set name="var"><star /></set></think>
+        <condition>
+            <li name="var" value="akcesoria">
+            Swietnie, czy chce sie Pan dowiedziec na ten temat odrobine wiecej?
+            <think><set name="topic">ZESTAW</set></think>
+            </li>
+            <li name="var" value="* meskie">
+            Swietnie, jakiego rozmiaru Pan potrzebuje?
+            <think><set name="topic">MESKIE</set></think>
+            </li>
+            <li name="var" value="* damskie">
+            Swietnie, jakiego rozmiaru Pan potrzebuje?
+            <think><set name="topic">DAMSKIE</set></think>
+            </li>
+            <li name="var" value="nic*">
+            Alez nie moze Pan tak powiedziec, prosze dac sie namowic na zestaw akcesoriow. Wyslucha Pan chociaz oferty?
+            <think><set name="topic">ZESTAW</set></think>
+            </li>
+            <li name="var" value="nie mam pieniedzy">
+            Nasze akcesoria kosztuja jedynie 15 zl, mozemy rozlozyc to na nisko oprocentowane raty.
+            Chcialby Pan uslyszec co znajduje sie w naszym zestawie?
+            <think><set name="topic">ZESTAW</set></think>
+            </li>
+            <li name="var" value="*">
+            Polecam zestaw akcesoriow, kosztuja jedynie 15 zl, mozemy rozlozyc to na nisko oprocentowane raty.
+            Chcialby Pan uslyszec co znajduje sie w naszym zestawie?
+            <think><set name="topic">ZESTAW</set></think>
+            </li>
+        </condition>
+      </template>
+    </category>
+   
+    <category>
+        <pattern>*</pattern>
+        <template>W naszym sklepie sprzedajemy jedynie buty oraz akcesoria do nich, musi sie Pan zdecydowac co chce kupic, prosze powiedziec tylko co Pana najbardziej interesuje buty meskie, damskie czy akcesoria?</template>
+    </category>
+    
+    
+</topic>
+
+<topic name="ZESTAW">
+    
+    
+    <category>
+        <pattern>TAK</pattern>
+        <template>W zestawie znajduje sie preparat do impregnacji obuwia, szczotka do czyszczenia oraz pasta do butow. To wszystko jedynie za 15zl. Zdecyduje sie Pan na zakup?</template>
+    </category>
+    
+    <category>
+        <pattern>TAK *</pattern>
+        <template><srai>TAK</srai></template>
+    </category>
+    
+    <category>
+        <pattern>CO JEST*</pattern>
+        <template><srai>TAK</srai></template>
+    </category>
+    
+    <category>
+        <pattern>* CO JEST*</pattern>
+        <template><srai>TAK</srai></template>
+    </category>
+
+    <category>
+        <pattern>NIE</pattern>
+        <template>W takim razie moze moge w czyms jeszcze pomoc?
+            <think><set name="topic">DALEJ</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>NIE*</pattern>
+        <template><srai>NIE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>TAK</pattern>
+        <that>* ZDECYDUJE SIE PAN NA ZAKUP</that>
+        <template> Swietnie, napewno bedzie Pan zadowolony. Moge w czyms jeszcze pomoc?
+            <think><set name="topic">DALEJ</set></think>
+        </template>   
+    </category>
+    
+    <category>
+        <pattern>TAK*</pattern>
+        <that>* ZDECYDUJE SIE PAN NA ZAKUP</that>
+        <template> Swietnie, napewno bedzie Pan zadowolony. Moge w czyms jeszcze pomoc?
+            <think><set name="topic">DALEJ</set></think>
+        </template>   
+    </category>
+    
+    <category>
+        <pattern>NI*</pattern>
+        <that>* ZDECYDUJE SIE PAN NA ZAKUP</that>
+        <template> Moze jednak Pan zdecyduje sie chociaz na jedna z tych rzeczy, zapewniam, ze to wydluzy czas "zycia" Pana butow?</template>
+    </category>
+    
+    <category>
+        <pattern>8</pattern>
+        <that>* ZDECYDUJE SIE PAN NA ZAKUP</that>
+        <template> Moze jednak Pan zdecyduje sie chociaz na jedna z tych rzeczy, zapewniam, ze to wydluzy czas "zycia" Pana butow?</template>
+    </category>
+
+    <category>
+        <pattern>TAK*</pattern>
+        <that>* PANA BUTOW</that>
+        <template> Swietnie, napewno bedzie Pan zadowolony. Moge w czyms jeszcze pomoc?
+            <think><set name="topic">DALEJ</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>NI*</pattern>
+        <that>*PANA BUTOW</that>
+        <template>Moge w czyms jeszcze pomoc?
+            <think><set name="topic">DALEJ</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>POPRO*</pattern>
+        <that>* PANA BUTOW</that>
+        <template> Swietnie, napewno bedzie Pan zadowolony. Moge w czyms jeszcze pomoc?
+            <think><set name="topic">DALEJ</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* POPRO *</pattern>
+        <that>* PANA BUTOW</that>
+        <template><srai>POPRO*</srai></template>
+    </category>
+
+    <category>
+        <pattern>OK</pattern>
+        <that>* PANA BUTOW</that>
+        <template> Swietnie, napewno bedzie Pan zadowolony. Moge w czyms jeszcze pomoc?
+            <think><set name="topic">DALEJ</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>* PANA BUTOW</that>
+        <template> Rozumiem, moge w czyms jeszcze pomoc?
+            <think><set name="topic">DALEJ</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <template>Zdecydowanie zachecam do nabycia tego zestawu, za jedyne 15 zl otrzyma Pan preparat do impregnacji obuwia,
+            szczotka do czyszczenia oraz pasta do butow. Zdecyduje sie Pan na zakup?</template>
+    </category>
+
+</topic>
+
+<topic name="MESKIE">
+
+    <category>
+        <pattern>*</pattern>
+        <template>Dobrze, a bardziej interesuja Pana buty sportowe czy wyjsciowe?</template>
+    </category>
+    
+    <category>
+        <pattern>SPORTOWE</pattern>
+        <template>Na skladzie posiadamy adidasy oraz trampki. Ktore chcialby Pan zakupia?
+		<think><set name="topic">ZAKONCZENIE</set></think>
+	</template>
+    </category>
+    
+    <category>
+        <pattern>SPORTOWE *</pattern>
+        <template><srai>SPORTOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>* SPORTOWE *</pattern>
+        <template><srai>SPORTOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>*SPORTOWE</pattern>
+        <template><srai>SPORTOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>WYJSCIOWE</pattern>
+        <template>Na skladzie posiadamy trzewiki oraz buty wizytowe. Ktore chcialby Pan zakupic?
+		<think><set name="topic">ZAKONCZENIE</set></think>
+	</template>
+    </category>
+    
+    <category>
+        <pattern>WYJSCIOWE*</pattern>
+        <template><srai>WYJSCIOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>*WYJSCIOWE*</pattern>
+        <template><srai>WYJSCIOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>*WYJSCIOWE </pattern>
+        <template><srai>*WYJSCIOWE*</srai></template>
+    </category>
+    
+    <category>
+        <pattern>NIE *</pattern>
+        <that>* KTORE CHCIALBY PAN ZAKUPIA?</that>
+        <template>W takim razie polecam kupic zestaw pielegnacyjny do butow. Chcialbym sie Pan dowiedziec czegos wiecej na ten temat?
+            <think><set name="topic">ZESTAW</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ NIE *</pattern>
+        <that>* KTORE CHCIALBY PAN ZAKUPIC?</that>
+        <template><srai>_ NIE *</srai></template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>* KTORE CHCIALBY PAN ZAKUPIC?</that>
+        <template>Dobrze w takim razie, jaki kolor butow Pana interesuje?
+            <think><set name="topic">ZAKONCZENIE</set></think>
+        </template>
+    </category>    
+        
+</topic>
+
+<topic name="DAMSKIE">
+
+
+    
+    <category>
+        <pattern>SPORTOWE</pattern>
+        <template>Na skladzie posiadamy adidasy oraz trampki. Ktore chcialby Pan zakupic?</template>
+    </category>
+    
+    <category>
+        <pattern>SPORTOWE *</pattern>
+        <template><srai>SPORTOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>* SPORTOWE</pattern>
+        <template><srai>SPORTOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>* SPORTOWE *</pattern>
+        <template><srai>SPORTOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>WYJSCIOWE</pattern>
+        <template>Na skladzie posiadamy baleriny oraz buty na obcasie. Ktore chcialby Pan zakupic?</template>
+    </category>
+    
+    <category>
+        <pattern>WYJSCIOWE *</pattern>
+        <template><srai>WYJSCIOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>* WYJSCIOWE</pattern>
+        <template><srai>WYJSCIOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>* WYJSCIOWE *</pattern>
+        <template><srai>WYJSCIOWE</srai></template>
+    </category>
+    
+    <category>
+        <pattern> NIE *</pattern>
+        <template>W takim razie polecam kupic zestaw pielegnacyjny do butow. Chcialbym sie Pan dowiedziec czegos wiecej na ten temat?
+            <think><set name="topic">ZESTAW</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* NIE *</pattern>
+        <template><srai>NIE *</srai></template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <template>Dobrze w takim razie, jaki kolor butow Pana interesuje?
+            <think><set name="topic">ZAKONCZENIE</set></think>
+        </template>
+    </category>  
+
+    <category>
+        <pattern>*</pattern>
+        <template>Dobrze, a bardziej interesuj1 Pana buty sportowe czy wyjsciowe?</template>
+    </category>  
+        
+</topic>
+
+<topic name="DALEJ">
+
+    <category>
+        <pattern>NIE</pattern>
+        <template>Rozumiem, dziekuje za zakupy w naszym sklepie i zapraszam ponownie
+		<think><set name="topic">POZEGNANIE</set></think>
+	</template>
+    </category>
+    
+    <category>
+        <pattern>NIE *</pattern>
+        <template><srai>NIE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>* NIE *</pattern>
+        <template><srai>NIE</srai></template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <template>Niech Pan sekunde poczeka, takimi sprawami zajmuje sie moj kolega, za chwile go zawolam
+		<think><set name="topic">POZEGNANIE</set></think>
+	</template>
+    </category>
+    
+</topic>
+
+<topic name="ZAKONCZENIE">
+    
+<category>
+        <pattern>*</pattern>
+        <template>To niech Pan mi powie z jakiego przedzialu cenowego chcialby Pan zobaczyc wybrane buty?
+		<think><set name="topic">ZAK2</set></think>
+	</template>
+    </category>
+   
+</topic>
+
+<topic name="ZAK2">
+ 
+    <category>
+        <pattern>*</pattern>
+        <template>Rozumiem, na pewno znajdziemy cos co bedzie Panu odpowiadac, zapraszam do kolegi tutaj obok,
+ zaprezentuje Panu buty, ktore mam nadzieje spelnia Pana wszystkie wymagania
+		<think><set name="topic">POZEGNANIE</set></think>
+	</template>
+    </category>
+
+</topic>
+
+
+<topic name="POZEGNANIE">
+ 
+    <category>
+        <pattern>*</pattern>
+        <template>Dowidzenia i zapraszam ponownie</template>
+    </category>
+
+</topic>
+
+</aiml>
