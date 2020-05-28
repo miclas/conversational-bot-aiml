@@ -6,4 +6,4 @@ print("")
 print("Klient wchodzi do sklepu z obuwiem i podchodzi do obslugi, aby sie przywitac")
 print("")
 while True:
-    print(k.respond(raw_input("> ")))
+    print(k.respond(input("> ")))
